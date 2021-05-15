@@ -21,13 +21,13 @@ export class CourseListComponent implements OnInit {
     }
 
     retrieveAll(): void {
-         this.courseService.retrieveAll()//.subscribe({
-        //     next: courses => {
-        //         this._courses = courses;
-        //         this.filteredCourses = this._courses;
-        //     },
-        //     error: err => console.log('Error', err)
-        // })
+        this.courseService.retrieveAll().subscribe({
+            next: courses => {
+                this._courses = courses;
+                this.filteredCourses = this._courses;
+            },
+            error: err => console.log('Error', err)
+        })
     }
 
     // deleteById(courseId: number): void {
