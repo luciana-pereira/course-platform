@@ -25,7 +25,7 @@ export class CourseService {
     if(course.id) {
       return this.httpClient.put<Course>(`${this.courseUrl}/${course.id}`, course);
     } else {
-      return this.httpClient.put<Course>(`${this.courseUrl}`, course);
+      return this.httpClient.post<Course>(`${this.courseUrl}`, course);
     }
   }
 }
