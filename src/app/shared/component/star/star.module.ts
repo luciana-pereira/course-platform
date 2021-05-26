@@ -5,6 +5,9 @@ import { StarComponent } from './star.component';
     declarations: [
       StarComponent
     ],
+    exports: [
+      StarComponent
+    ]
 })
 
 export class StarModule {}
